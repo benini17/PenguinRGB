@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alex Benini Teixeira" />
+
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+
+    <title>RGB Color</title>
+  </head>
+  <body>
+    <div class="penguin">
+      <div class="penguin-bottom">
+        <div class="right-hand"></div>
+        <div class="left-hand"></div>
+        <div class="right-feet"></div>
+        <div class="left-feet"></div>
+      </div>
+      <div class="penguin-top">
+        <div class="right-cheek"></div>
+        <div class="left-cheek"></div>
+        <div class="belly"></div>
+        <div class="right-eye">
+          <div class="sparkle"></div>
+        </div>
+        <div class="left-eye">
+          <div class="sparkle"></div>
+        </div>
+        <div class="blush-right"></div>
+        <div class="blush-left"></div>
+        <div class="beak-top"></div>
+        <div class="beak-bottom"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="title">
+        <p>
+          Bootcamp Full Stack Developer <br />
+          Módulo 1 - RGB Colors
+        </p>
+      </div>
+      <div class="section">
+        <span class="display-block">Red </span>
+        <span class="display-block">Green </span>
+        <span class="display-block">Blue </span>
+      </div>
+      <div class="section">
+        <input
+          id="range-red"
+          class="display-block"
+          type="range"
+          min="0"
+          max="255"
+          value="0"
+        />
+        <input
+          id="range-green"
+          class="display-block"
+          type="range"
+          min="0"
+          max="255"
+          value="0"
+        />
+        <input
+          id="range-blue"
+          class="display-block"
+          type="range"
+          min="0"
+          max="255"
+          value="0"
+        />
+      </div>
+      <div class="section">
+        <input
+          id="input-red"
+          class="display-block input-size"
+          disabled
+          value="0"
+          type="text"
+        />
+        <input
+          id="input-green"
+          class="display-block input-size"
+          disabled
+          value="0"
+          type="text"
+        />
+        <input
+          id="input-blue"
+          class="display-block input-size"
+          disabled
+          value="0"
+          type="text"
+        />
+      </div>
+      <div id="inputsBtn">
+        <input type="button" value="penguinSkinBtn" id="penguinSkinBtn" />
+        <input type="button" value="penguinBellyBtn" id="penguinBellyBtn" />
+        <input type="button" value="penguinBeakBtn" id="penguinBeakBtn" />
+      </div>
+      <div class="name">
+        <span>By: Alex Benini Teixeira</span>
+      </div>
+    </div>
+  </body>
+</html>
