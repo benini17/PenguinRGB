@@ -15,7 +15,6 @@ let divInput = document.getElementById('inputsBtn');
 divInput.addEventListener('click', chosenBtn);
 
 let penguin = document.getElementsByClassName('penguin');
-// bgColor.style.backgroundColor = '#000';
 
 let red = 0;
 let green = 0;
@@ -28,16 +27,12 @@ function start() {
   renderColors();
 }
 
-// document.documentElement.style.setProperty('--penguin-skin');
-
 let counter = 0;
 
 function chosenBtn(event) {
   counter += 1;
-  console.log(counter);
 
   if (counter % 2 === 0) {
-    console.log('entrou aqui');
     if (event.target.id === 'penguinSkinBtn') {
       penguinSkinBtn.style.background = 'red';
     } else if (event.target.id === 'penguinBellyBtn') {
@@ -50,7 +45,6 @@ function chosenBtn(event) {
     penguinBellyBtn.disabled = false;
     penguinBeakBtn.disabled = false;
   } else {
-    console.log('event if de fora parte else', event.target.id);
     if (event.target.id === 'penguinSkinBtn') {
       penguinSkinBtn.style.backgroundColor = 'green';
       penguinBellyBtn.disabled = true;
@@ -67,10 +61,6 @@ function chosenBtn(event) {
 
     enableRange();
   }
-
-  console.log('dentro do primeiro if', event);
-
-  console.log(counter);
 }
 
 function disableRange() {
@@ -117,24 +107,15 @@ function renderColors() {
   g = green;
   b = blue;
 
-  console.log(r);
-  console.log(g);
-  console.log(b);
-  console.log(penguinSkinBtn);
-  console.log(penguinSkinBtn.style.backgroundColor);
-
   let skinChosen = penguinSkinBtn.style.backgroundColor;
   let bellyChosen = penguinBellyBtn.style.backgroundColor;
   let beakChosen = penguinBeakBtn.style.backgroundColor;
 
   if (r >= 0 && g >= 0 && b >= 0) {
-    // penguin.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
     usedColor = `rgb(${red}, ${green}, ${blue})`;
   }
 
   if (skinChosen == 'green') {
-    console.log('chegou aqui');
-    console.log(usedColor);
     getComputedStyle(document.documentElement, null).getPropertyValue(
       '--penguin-skin'
     );
@@ -142,7 +123,6 @@ function renderColors() {
       .querySelector('.penguin')
       .style.setProperty('--penguin-skin', usedColor);
   } else if (bellyChosen == 'green') {
-    console.log('chegou aqui 2');
     document
       .querySelector('.penguin')
       .style.setProperty('--penguin-belly', usedColor);
@@ -150,11 +130,7 @@ function renderColors() {
     document
       .querySelector('.penguin')
       .style.setProperty('--penguin-beak', usedColor);
-    console.log('chegou aqui 3');
   }
-  // ,penguinBellyBtn,penguinBeakBtn
-
-  // document.documentElement.style.setProperty('--penguin-skin', usedColor);
 }
 
 disableRange();
