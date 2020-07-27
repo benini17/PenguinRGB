@@ -42,66 +42,48 @@
           Módulo 1 - RGB Colors
         </p>
       </div>
-      <div class="section">
-        <span class="display-block">Red </span>
-        <span class="display-block">Green </span>
-        <span class="display-block">Blue </span>
-      </div>
-      <div class="section">
+      <div class="section-flex-row">
+        <span class="label">Red </span>
         <input
           id="range-red"
-          class="display-block"
+          class="range"
           type="range"
           min="0"
           max="255"
           value="0"
         />
+        <input id="input-red" class="text" disabled value="0" type="text" />
+      </div>
+      <div class="section-flex-row">
+        <span class="label">Green </span>
         <input
           id="range-green"
-          class="display-block"
+          class="range"
           type="range"
           min="0"
           max="255"
           value="0"
         />
+        <input id="input-green" class="text" disabled value="0" type="text" />
+      </div>
+      <div class="section-flex-row">
+        <span class="label">Blue </span>
         <input
           id="range-blue"
-          class="display-block"
+          class="range"
           type="range"
           min="0"
           max="255"
           value="0"
         />
-      </div>
-      <div class="section">
-        <input
-          id="input-red"
-          class="display-block input-size"
-          disabled
-          value="0"
-          type="text"
-        />
-        <input
-          id="input-green"
-          class="display-block input-size"
-          disabled
-          value="0"
-          type="text"
-        />
-        <input
-          id="input-blue"
-          class="display-block input-size"
-          disabled
-          value="0"
-          type="text"
-        />
+        <input id="input-blue" class="text" disabled value="0" type="text" />
       </div>
       <div id="inputsBtn">
         <input type="button" value="Penguin Skin Color" id="penguinSkinBtn" />
         <input type="button" value="Penguin Belly Color" id="penguinBellyBtn" />
         <input type="button" value="Penguin Beak Color" id="penguinBeakBtn" />
       </div>
-      <div class="name">
+      <div class="authourName">
         <span>By: Alex Benini Teixeira</span>
       </div>
     </div>
