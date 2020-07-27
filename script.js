@@ -14,7 +14,7 @@ let divInput = document.getElementById('inputsBtn');
 
 divInput.addEventListener('click', chosenBtn);
 
-// let bgColor = document.querySelector('#bg-color');
+let penguin = document.getElementsByClassName('penguin');
 // bgColor.style.backgroundColor = '#000';
 
 let red = 0;
@@ -45,25 +45,32 @@ function chosenBtn(event) {
     } else {
       penguinBeakBtn.style.background = 'red';
     }
+    disableRange();
+    penguinSkinBtn.disabled = false;
+    penguinBellyBtn.disabled = false;
+    penguinBeakBtn.disabled = false;
+  } else {
+    console.log('event if de fora parte else', event.target.id);
+    if (event.target.id === 'penguinSkinBtn') {
+      penguinSkinBtn.style.backgroundColor = 'green';
+      penguinBellyBtn.disabled = true;
+      penguinBeakBtn.disabled = true;
+    } else if (event.target.id === 'penguinBellyBtn') {
+      penguinBellyBtn.style.background = 'green';
+      penguinSkinBtn.disabled = true;
+      penguinBeakBtn.disabled = true;
+    } else {
+      penguinBeakBtn.style.background = 'green';
+      penguinSkinBtn.disabled = true;
+      penguinBellyBtn.disabled = true;
+    }
+
+    enableRange();
   }
 
   console.log('dentro do primeiro if', event);
-  if (event.target.id === 'penguinSkinBtn') {
-    penguinSkinBtn.style.backgroundColor = 'green';
-    penguinBellyBtn.disabled = true;
-    penguinBeakBtn.disabled = true;
-  } else if (event.target.id === 'penguinBellyBtn') {
-    penguinBellyBtn.style.background = 'green';
-    penguinSkinBtn.disabled = true;
-    penguinBeakBtn.disabled = true;
-  } else {
-    penguinBeakBtn.style.background = 'green';
-    penguinSkinBtn.disabled = true;
-    penguinBellyBtn.disabled = true;
-  }
 
   console.log(counter);
-  enableRange();
 }
 
 function disableRange() {
@@ -109,10 +116,46 @@ function renderColors() {
   r = red;
   g = green;
   b = blue;
-  // bgColor.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
-  // document.documentElement.style.setProperty('--penguin-skin')
+
+  console.log(r);
+  console.log(g);
+  console.log(b);
+  console.log(penguinSkinBtn);
+  console.log(penguinSkinBtn.style.backgroundColor);
+
+  let skinChosen = penguinSkinBtn.style.backgroundColor;
+  let bellyChosen = penguinBellyBtn.style.backgroundColor;
+  let beakChosen = penguinBeakBtn.style.backgroundColor;
+
+  if (r >= 0 && g >= 0 && b >= 0) {
+    // penguin.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+    usedColor = `rgb(${red}, ${green}, ${blue})`;
+  }
+
+  if (skinChosen == 'green') {
+    console.log('chegou aqui');
+    console.log(usedColor);
+    getComputedStyle(document.documentElement, null).getPropertyValue(
+      '--penguin-skin'
+    );
+    document
+      .querySelector('.penguin')
+      .style.setProperty('--penguin-skin', usedColor);
+  } else if (bellyChosen == 'green') {
+    console.log('chegou aqui 2');
+    document
+      .querySelector('.penguin')
+      .style.setProperty('--penguin-belly', usedColor);
+  } else if (beakChosen == 'green') {
+    document
+      .querySelector('.penguin')
+      .style.setProperty('--penguin-beak', usedColor);
+    console.log('chegou aqui 3');
+  }
+  // ,penguinBellyBtn,penguinBeakBtn
+
+  // document.documentElement.style.setProperty('--penguin-skin', usedColor);
 }
 
 disableRange();
 start();
-disableRange();
