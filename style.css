@@ -177,6 +177,9 @@
   width: 500px;
   align-items: center;
   background-color: bisque;
+  border: black solid 2px;
+  position: relative;
+  left: 370px;
 }
 
 .title {
@@ -192,6 +195,8 @@
 .authourName {
   font-weight: bold;
   font-size: 15px;
+  margin-left: 10px;
+  margin-bottom: 3px;
 }
 
 #penguinSkinBtn,
