@@ -10,6 +10,10 @@ let penguinSkinBtn = document.getElementById('penguinSkinBtn');
 let penguinBellyBtn = document.getElementById('penguinBellyBtn');
 let penguinBeakBtn = document.getElementById('penguinBeakBtn');
 
+redRange.addEventListener('input', getRed);
+greenRange.addEventListener('input', getGreen);
+blueRange.addEventListener('input', getBlue);
+
 let divInput = document.getElementById('inputsBtn');
 
 divInput.addEventListener('click', chosenBtn);
@@ -76,30 +80,24 @@ function enableRange() {
 }
 
 function getRed() {
-  redRange.addEventListener('input', function () {
-    let currentValueRed = redRange.value;
-    red = currentValueRed;
-    redInput.value = currentValueRed;
-    renderColors();
-  });
+  let currentValueRed = redRange.value;
+  red = currentValueRed;
+  redInput.value = currentValueRed;
+  renderColors();
 }
 
 function getGreen() {
-  greenRange.addEventListener('input', function () {
-    let currentValueGreen = greenRange.value;
-    green = currentValueGreen;
-    greenInput.value = currentValueGreen;
-    renderColors();
-  });
+  let currentValueGreen = greenRange.value;
+  green = currentValueGreen;
+  greenInput.value = currentValueGreen;
+  renderColors();
 }
 
 function getBlue() {
-  blueRange.addEventListener('input', function () {
-    let currentValueBlue = blueRange.value;
-    blue = currentValueBlue;
-    blueInput.value = currentValueBlue;
-    renderColors();
-  });
+  let currentValueBlue = blueRange.value;
+  blue = currentValueBlue;
+  blueInput.value = currentValueBlue;
+  renderColors();
 }
 
 function renderColors() {
