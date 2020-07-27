@@ -175,6 +175,23 @@
 
 .container {
   width: 500px;
+  align-items: center;
+  background-color: bisque;
+}
+
+.title {
+  margin: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#inputsBtn {
+  margin: 10px;
+}
+
+.authourName {
+  font-weight: bold;
+  font-size: 15px;
 }
 
 #penguinSkinBtn,
@@ -184,4 +201,25 @@
   font-weight: bold;
   height: 40px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.label {
+  min-width: 120px;
+}
+
+.range {
+  min-width: 200px;
+}
+
+.text {
+  width: 50px;
+  margin-left: 10px;
 }
