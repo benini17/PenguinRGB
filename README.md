@@ -1,5 +1,9 @@
 <h1 style="align-content: center; font-weight: bold;">RGB Color - Penguin</h1>
 
+<p align="center">>
+<img src="https://media.giphy.com/media/hWGZUR2dXMlfyJoQRY/giphy.gif" alt="RGB-Penguin" />
+</p>
+
 <div>
   <h2 style="text-decoration: underline;">About this project</h2>
 
